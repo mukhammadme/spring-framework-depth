@@ -1,5 +1,6 @@
 package com.linc.pm.service;
 
+import com.linc.pm.aspect.Countable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +22,7 @@ public class TimeService {
     }
 
 
+    @Countable
     public String getCurrentTime(){
         LocalDateTime now = LocalDateTime.now();
         if (is24) {
